@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Lista Compras</string>
+
+
+    <string name="nome">Nome:</string>
+    <string name="data">Data:</string>
+    <string name="lista">Lista Mercado</string>
+    <string name="salvar">Salvar</string>
+    <string name="compra_salva_com_sucesso">Compra salva com sucesso!</string>
+</resources>
