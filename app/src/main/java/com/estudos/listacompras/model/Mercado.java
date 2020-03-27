@@ -1,4 +1,4 @@
-package com.estudos.listacompras;
+package com.estudos.listacompras.model;
 
 public class Mercado {
 

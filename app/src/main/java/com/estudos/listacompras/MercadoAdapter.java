@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.estudos.listacompras.model.Mercado;
+
 import java.util.ArrayList;
 
 public class MercadoAdapter extends ArrayAdapter<Mercado> {
