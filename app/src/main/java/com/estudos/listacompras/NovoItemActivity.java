@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -65,15 +66,38 @@ public class NovoItemActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.salvar_itens_sacola){
-            Toast.makeText(getApplicationContext(), R.string.compra_salva_com_sucesso, Toast.LENGTH_SHORT).show();
-            finish();
+            if(verificarCamposPreenchidos()){
+                Toast.makeText(getApplicationContext(), R.string.preencher_campos_obrigatorios, Toast.LENGTH_SHORT).show();
+            }else{
+                Toast.makeText(getApplicationContext(), R.string.compra_salva_com_sucesso, Toast.LENGTH_SHORT).show();
+                finish();
+            }
+
         }
         return super.onOptionsItemSelected(item);
     }
 
-    private void recuperarDadosInseridosPeloUsuario(){
+    private boolean verificarCamposPreenchidos(){
+
+        Boolean verificarCampos= false;
 
         EditText nome = (EditText) findViewById(R.id.etNome);
         String recuperarNome = nome.getText().toString();
+
+        EditText data = (EditText) findViewById(R.id.etData);
+        String recuperarData = data.getText().toString();
+
+        if (recuperarNome.equals("")){
+            verificarCampos = true;
+            nome.setError("Campo nome obrigatório");
+        }
+
+        if (recuperarData.equals("")){
+            verificarCampos = true;
+            data.setError("Campo data obrigatório");
+        }
+
+        return verificarCampos;
     }
+
 }

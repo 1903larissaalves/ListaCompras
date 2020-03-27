@@ -7,4 +7,5 @@
     <string name="lista">Lista Mercado</string>
     <string name="salvar">Salvar</string>
     <string name="compra_salva_com_sucesso">Compra salva com sucesso!</string>
+    <string name="preencher_campos_obrigatorios">Campo obrigatório</string>
 </resources>
