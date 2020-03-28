@@ -1,6 +1,5 @@
 package com.estudos.listacompras;
 
-import android.view.View;
 import android.widget.EditText;
 
 import com.estudos.listacompras.model.Compra;
