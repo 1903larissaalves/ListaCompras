@@ -31,11 +31,16 @@ public class ListaCompraDAO extends SQLiteOpenHelper {
 
     public void inserirNovaListaCompras(ListaCompra novaListaCompras) {
         SQLiteDatabase bancoDados = getWritableDatabase();
+        ContentValues novaLista = getContentValues(novaListaCompras);
+
+        bancoDados.insert("ListaCompras", null, novaLista);
+    }
+
+    private ContentValues getContentValues(ListaCompra novaListaCompras) {
         ContentValues novaLista = new ContentValues();
         novaLista.put("nome", novaListaCompras.getNome());
         novaLista.put("data", novaListaCompras.getData());
-
-        bancoDados.insert("ListaCompras", null, novaLista);
+        return novaLista;
     }
 
     public List<ListaCompra> buscarListasCompras() {
@@ -56,5 +61,20 @@ public class ListaCompraDAO extends SQLiteOpenHelper {
         cursor.close();
 
         return listasCompras;
+    }
+
+    public void deletarListaCompras(ListaCompra listaCompra) {
+
+        SQLiteDatabase bancoDados = getWritableDatabase();
+        String parametros[] = {String.valueOf(listaCompra.getId())};
+        bancoDados.delete("ListaCompras", "id = ?", parametros);
+
+    }
+
+    public void alterarListaCompras(ListaCompra listaCompra) {
+        SQLiteDatabase bancoDados = getWritableDatabase();
+        ContentValues novaLista = getContentValues(listaCompra);
+        String parametros[] = {String.valueOf(listaCompra.getId())};
+        bancoDados.update("ListaCompras", novaLista, "id = ?", parametros);
     }
 }

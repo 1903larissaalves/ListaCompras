@@ -1,8 +1,10 @@
 package com.estudos.listacompras.model;
 
-public class ListaCompra {
+import java.io.Serializable;
 
-    long id;
+public class ListaCompra implements Serializable {
+
+    Long id;
     String nome;
     String data;
 
@@ -23,11 +25,11 @@ public class ListaCompra {
         this.data = data;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

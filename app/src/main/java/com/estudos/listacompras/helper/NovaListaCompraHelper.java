@@ -10,15 +10,29 @@ public class NovaListaCompraHelper {
     private final EditText nome;
     private final EditText data;
 
+    private ListaCompra listaCompra;
+
     public NovaListaCompraHelper(NovaListaCompraActivity activity){
         nome = activity.findViewById(R.id.etNome);
         data = activity.findViewById(R.id.etData);
+
+        listaCompra = new ListaCompra();
+
     }
 
     public ListaCompra pegarCompra() {
-        ListaCompra listaCompra = new ListaCompra();
         listaCompra.setNome(nome.getText().toString());
         listaCompra.setData(data.getText().toString());
         return listaCompra;
+    }
+
+
+    public void preencherDadosListaCompra(ListaCompra listaCompra) {
+
+        nome.setText(listaCompra.getNome());
+        data.setText(listaCompra.getData());
+
+        this.listaCompra = listaCompra;
+
     }
 }

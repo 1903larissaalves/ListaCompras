@@ -1,6 +1,8 @@
 package com.estudos.listacompras.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -41,6 +43,12 @@ public class NovaListaCompraActivity extends AppCompatActivity {
 
         helper = new NovaListaCompraHelper(this);
 
+        Intent intent = getIntent();
+        ListaCompra listaCompra = (ListaCompra) intent.getSerializableExtra("ListaCompras");
+
+        if (listaCompra != null){
+            helper.preencherDadosListaCompra(listaCompra);
+        }
     }
 
     private ArrayList<ItemMercado> mostrarItensMercado(){
@@ -111,14 +119,23 @@ public class NovaListaCompraActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.salvar_lista_compra){
+
             ListaCompra listaCompra = helper.pegarCompra();
-
             ListaCompraDAO novaListaCompras = new ListaCompraDAO(this);
-            novaListaCompras.inserirNovaListaCompras(listaCompra);
-            novaListaCompras.close();
 
-            Toast.makeText(getApplicationContext(), "Lista salva com sucesso! " + listaCompra.getNome(), Toast.LENGTH_SHORT).show();
-            finish();
+
+            if (listaCompra.getId() != null){
+                novaListaCompras.alterarListaCompras(listaCompra);
+                novaListaCompras.close();
+                Toast.makeText(getApplicationContext(), "Lista " + listaCompra.getNome() +  " alterada com sucesso!" , Toast.LENGTH_SHORT).show();
+                finish();
+            }else{
+                novaListaCompras.inserirNovaListaCompras(listaCompra);
+                Toast.makeText(getApplicationContext(), "Lista " + listaCompra.getNome() +  " salva com sucesso!", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+
+
 
         }
         return super.onOptionsItemSelected(item);
