@@ -48,18 +48,51 @@ public class NovaListaCompraActivity extends AppCompatActivity {
 
         ItemMercado itemArroz = new ItemMercado(1,"Arroz", "R$: 10,00", R.drawable.arroz);
         itens.add(itemArroz);
+
         ItemMercado itemFeijao = new ItemMercado(2,"Feijão", "R$: 8,00", R.drawable.feijao);
         itens.add(itemFeijao);
+
         ItemMercado itemBatata = new ItemMercado(3,"Batata", "R$: 10,00", R.drawable.batata);
         itens.add(itemBatata);
+
         ItemMercado itemPolenta = new ItemMercado(4,"Polenta", "R$: 12,00", R.drawable.polenta);
         itens.add(itemPolenta);
+
         ItemMercado itemCebola = new ItemMercado(5,"Cebola", "R$: 2,00", R.drawable.cebola);
         itens.add(itemCebola);
+
         ItemMercado itemBife = new ItemMercado(6,"Bife", "R$: 22,00", R.drawable.bife);
         itens.add(itemBife);
+
         ItemMercado itemSuco = new ItemMercado(7,"Suco", "R$: 3,00", R.drawable.suco);
         itens.add(itemSuco);
+
+        ItemMercado itemAlface = new ItemMercado(8,"Alface", "R$: 2,50", R.drawable.alface);
+        itens.add(itemAlface);
+
+        ItemMercado itemAlho = new ItemMercado(9,"Alho", "R$: 2,50", R.drawable.alho);
+        itens.add(itemAlho);
+
+        ItemMercado itemTomate = new ItemMercado(10,"Tomate", "R$: 4,00", R.drawable.tomate);
+        itens.add(itemTomate);
+
+        ItemMercado itemCafe = new ItemMercado(11,"Café", "R$: 8,50", R.drawable.cafe);
+        itens.add(itemCafe);
+
+        ItemMercado itemErvilha = new ItemMercado(12,"Ervilha", "R$: 2,50", R.drawable.ervilha);
+        itens.add(itemErvilha);
+
+        ItemMercado itemMacarrao = new ItemMercado(13,"Macarrão", "R$: 3,00", R.drawable.massaa);
+        itens.add(itemMacarrao);
+
+        ItemMercado itempapel = new ItemMercado(15,"Papel Higiênico", "R$: 15,00", R.drawable.papel_higienico);
+        itens.add(itempapel);
+
+        ItemMercado itemSoja = new ItemMercado(16,"Soja", "R$: 2,50", R.drawable.soja);
+        itens.add(itemSoja);
+
+        ItemMercado itemRefrigerante = new ItemMercado(17,"Refrigerante", "R$: 6,00", R.drawable.refrigerante);
+        itens.add(itemRefrigerante);
 
         return itens;
     }
