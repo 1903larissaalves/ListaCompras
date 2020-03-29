@@ -7,22 +7,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class ListasComprasActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_listas_compras);
 
-        incluirNovoItemLista();
+        incluirNovaListaCompra();
     }
 
-    private void incluirNovoItemLista(){
-        Button incluirItem = (Button) findViewById(R.id.adicionarNovoItem);
-        incluirItem.setOnClickListener(new View.OnClickListener() {
+    private void incluirNovaListaCompra(){
+        Button incluirNovaLista = (Button) findViewById(R.id.adicionarNovaLista);
+        incluirNovaLista.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, NovoItemActivity.class);
+                Intent intent = new Intent(ListasComprasActivity.this, NovaListaCompraActivity.class);
                 startActivity(intent);
             }
         });

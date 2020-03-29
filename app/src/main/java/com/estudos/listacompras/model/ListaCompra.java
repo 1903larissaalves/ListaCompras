@@ -1,6 +1,6 @@
 package com.estudos.listacompras.model;
 
-public class Compra {
+public class ListaCompra {
 
     long id;
     String nome;

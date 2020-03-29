@@ -8,17 +8,17 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.estudos.listacompras.model.Mercado;
+import com.estudos.listacompras.model.ItemMercado;
 
 import java.util.ArrayList;
 
-public class MercadoAdapter extends ArrayAdapter<Mercado> {
+public class MercadoAdapter extends ArrayAdapter<ItemMercado> {
 
 
     private Context context;
-    private ArrayList<Mercado> elementos;
+    private ArrayList<ItemMercado> elementos;
 
-    public MercadoAdapter(Context context, ArrayList<Mercado> elementos){
+    public MercadoAdapter(Context context, ArrayList<ItemMercado> elementos){
         super(context, R.layout.item_mercado, elementos);
         this.context = context;
         this.elementos = elementos;

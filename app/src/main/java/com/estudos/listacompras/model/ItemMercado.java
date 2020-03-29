@@ -1,6 +1,6 @@
 package com.estudos.listacompras.model;
 
-public class Mercado {
+public class ItemMercado {
 
     private long id;
     private String produto;
@@ -40,7 +40,7 @@ public class Mercado {
         this.imagem = imagem;
     }
 
-    public Mercado(long id, String produto, String preco, int imagem){
+    public ItemMercado(long id, String produto, String preco, int imagem){
 
         this.id = id;
         this.produto = produto;
