@@ -1,4 +1,4 @@
-package com.estudos.listacompras;
+package com.estudos.listacompras.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,9 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import com.estudos.listacompras.R;
 import com.estudos.listacompras.model.ItemMercado;
-
 import java.util.ArrayList;
 
 public class MercadoAdapter extends ArrayAdapter<ItemMercado> {

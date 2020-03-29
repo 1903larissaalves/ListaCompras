@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NovaListaCompraActivity">
+    tools:context=".activity.NovaListaCompraActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/linearLayout"
@@ -42,7 +42,8 @@
             android:textStyle="bold"
             android:textColor="@color/colorPrimaryDark"
             android:gravity="center"
-            android:textSize="15dp"/>
+            android:textSize="15dp"
+            android:inputType="number"/>
 
         <ListView
             android:paddingTop="10dp"

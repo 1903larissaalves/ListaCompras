@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListasComprasActivity">
+    tools:context=".activity.ListasComprasActivity">
 
 
     <ListView
-        android:id="@+id/listaItens"
+        android:id="@+id/lista_compras"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
